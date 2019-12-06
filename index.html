@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sally Student</title>
+</head>
+<body>
+    <div id="application-resume"></div>
+    <div id="application-education"></div>
+    <div id="application-employment"></div>
+    <div id="application-contact"></div>
+  
+<script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+
+<script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+
+<script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+<script type="text/babel">
+    function App (props) {
+        console.log(props)
+        return (
+        <h1>{props.name}
+        </h1>
+        );
+    }
+
+    ReactDOM.render(
+        <App name="Sally Student"/>,
+        document.querySelector('#application-resume')
+    );
+
+    function Education () {
+        console.log()
+        return (
+        <div>
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor of Science, University of Oregon, Eugene Oregon</li>
+            </ul>
+        </div>
+        );
+    }
+
+    ReactDOM.render(
+        <Education />,
+        document.querySelector('#application-education')
+    );
+
+    function Employment () {
+        console.log()
+        return (
+        <div>
+            <h2>Employment</h2>
+            <h3>Starbucks</h3>
+                <ul>
+                    <li>Barista</li>
+                    <li>June 2016- May 2017</li>
+                </ul>
+            <h3>Uber</h3>
+                <ul>
+                    <li>Driver</li>
+                    <li>June 2017 - Present</li>
+                </ul>
+        </div>
+        );
+    }
+
+    ReactDOM.render(
+        <Employment/>,
+        document.querySelector('#application-employment')
+    );
+
+    function Contact () {
+        console.log()
+        return (
+        <div>
+            <h2>Contact</h2>
+            <address>Email me at <a href="mailto:SallyStudent@gmail.com">SallyStudent@gmail.com</a></address>
+        </div>
+        );
+    }
+
+    ReactDOM.render(
+        <Contact/>,
+        document.querySelector('#application-contact')
+    );
+
+</script>
+</body>
+</html>
